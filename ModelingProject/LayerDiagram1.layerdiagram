@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="db7d3d49-0bbf-47ab-a2a3-15ac149e2d64" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="482cca44-d30d-4177-8df1-46e488a74865" name="Comment1">
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="a676b4c3-ca22-4259-8a92-db7aa7398f02" />
+        </linkFromCommentToLayerElement>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="7ed28417-19cf-46a8-b711-69799e3cec72" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="7ed28417-19cf-46a8-b711-69799e3cec72" name="View" />
+    <layer Id="427326a0-6ac1-4349-8def-8600a5909b34" name="Model">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8f24b7c8-fa9c-4a4c-85d1-e9aa3e814477" direction="Forward">
+          <layerMoniker Id="7ed28417-19cf-46a8-b711-69799e3cec72" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="a676b4c3-ca22-4259-8a92-db7aa7398f02" name="Controller">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0ff23031-daef-4401-b3b7-e57109edb0ac" direction="Forward">
+          <layerMoniker Id="427326a0-6ac1-4349-8def-8600a5909b34" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="dbdfd339-f875-4f4b-8424-4fd9cc0ca4b8" direction="Forward">
+          <layerMoniker Id="7ed28417-19cf-46a8-b711-69799e3cec72" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>

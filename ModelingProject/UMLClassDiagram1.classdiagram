@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="fe2015fa-96a0-409a-8b88-47c3b161f7aa" name="UMLClassDiagram1" linkedPackageId="5ca310c7-664e-4325-bdc1-6ea0225a2837" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="8396c7eb-e462-4c1f-a759-b3d6a6166fa3">
+      <elementDefinition Id="b500a755-c9c7-4c67-a020-6aa58ffb1c1e" />
+      <body>观察者模式(Observer)</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="70d9b958-5dcc-45df-a629-8d832cd5a834" name="IView" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="454a8566-a6ac-4049-8105-2e1272ae263c" />
+        <ownedOperations>
+          <operation Id="48c5108f-23df-4a02-8877-e1322521af86" name="updateView" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ae26c7fa-e1b2-400c-bc16-5a686636985c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fdf8bdf0-4d8e-4a62-993b-7b2d5bda6e66" name="IModel im" direction="In" isUnique="false">
+                  <elementDefinition Id="a0585920-dcc4-46ae-8a6e-931d65bd4f06" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5a719e51-d936-41ae-99dd-da788d31e734" name="MainForm" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1ed4876e-6408-4136-8029-19eb676afec5" />
+        <suppliersInternal>
+          <interfaceRealization Id="23f34e98-3808-4af6-ba98-ac3b5cf26ca3">
+            <interfaceMoniker Id="70d9b958-5dcc-45df-a629-8d832cd5a834" LastKnownName="IView" />
+            <elementDefinition Id="750b11d9-5126-443c-8697-72eb95460ca0" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="6f60bfa6-47ea-4c90-ab78-ecb9c91fba1c" name="Controller cntroller" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a03c22a5-dab8-4dab-bdb9-39ef39afb55e" />
+          </property>
+          <property Id="a7d243d7-4cef-4709-a2f9-7439479173f1" name="Model model" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9cd5ae65-0997-4ed1-8f4c-c4e992790809" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="7f3e7a5e-c680-45f2-b247-b60955a963b3" name="updateView" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6bb6634b-a370-4086-a767-51bae1998918" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="03fb4887-1036-43b6-b6e5-1cac1394b686" name="IModel im" direction="In" isUnique="false">
+                  <elementDefinition Id="891e95d5-4b79-447f-86bb-a2278783810e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="60ee88c9-53f3-488b-b147-8d2476a7f963" name="IController" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f63c324-6cb6-4be7-8097-55e0c44ef063" />
+        <ownedOperations>
+          <operation Id="ada59422-1f56-4304-a452-e1929617c079" name="setModel" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eec8da77-8aa1-477c-ab9a-6c4b14b7ea23" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4222d264-7bd9-41de-aeb1-32ce068fcd0c" name="IModel im" direction="In" isUnique="false">
+                  <elementDefinition Id="cf7f515c-9c4a-4d31-94ae-396118b015a8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="26cde32a-a7b7-4b07-a1eb-2799bb988b0c" name="setView" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5ed36d25-7825-4163-9734-c8079b73343e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="94de91f7-e11a-4387-a197-62004967f9a7" name="IView iv" direction="In" isUnique="false">
+                  <elementDefinition Id="13129c15-5b4f-4374-afba-830791a1c3b3" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dee44df5-0024-46bc-9771-673c7ebe8955" name="downloadStart" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="564d66cb-42d4-476d-ab3c-1eb88f3895dd" />
+          </operation>
+          <operation Id="dff5d0f6-539d-4d4d-9a52-ae2d979a2aba" name="downloadStop" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d3682fd8-dbbe-46e1-a600-816feb66befd" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="31df7aa6-5ccd-4be3-a7ef-1507d4d6294d" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6a4aab80-e1d0-464f-86d5-fb790b38bc14" />
+        <suppliersInternal>
+          <interfaceRealization Id="d00cfa1e-3ef8-49ec-b670-e6a0cb103732">
+            <interfaceMoniker Id="60ee88c9-53f3-488b-b147-8d2476a7f963" LastKnownName="IController" />
+            <elementDefinition Id="8abedb1e-6788-458c-8938-67faa9e63f13" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="39a5be52-1448-4bca-9ccf-31861c0a7dc3" name="IModel im" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ec1daaaa-8c85-4a38-b51c-6c0ff5a98a7f" />
+          </property>
+          <property Id="eb2f5021-e174-415a-b9af-6c8764c262a7" name="IView iv" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cd7e4408-0536-4c2c-99c8-8dde47893b3b" />
+          </property>
+          <property Id="287ed80b-8bf3-4ab1-bb54-ed9ef5369db1" name="DownloaderManager dm" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a1808b2c-c13c-4207-8908-9d9053be1192" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="60b58135-b3ce-4c15-9a6f-ef6bf063972c" name="setModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="353e7c6d-ad7d-42ed-b07c-db480141f07c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5c74ab9-e897-486e-93c0-1707ca2ecde0" name="IModel im" direction="In" isUnique="false">
+                  <elementDefinition Id="b91d354b-3300-415e-826f-9ee35ea86be2" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d544ed52-2de7-4ebc-a583-996ab2ef43f0" name="setView" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d8790750-3632-4d77-8e8c-1790b5d458d3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4ea89761-0c62-4e61-85a0-b79e43c4d57b" name="IView iv" direction="In" isUnique="false">
+                  <elementDefinition Id="211ac524-1778-4d33-8964-f3a3b4350e0b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dfc30eb4-8bc7-482c-8978-abe9d89e9db3" name="downloadStart" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8fa6b036-b184-4d5d-b123-f43fa9020029" />
+          </operation>
+          <operation Id="da724094-cec1-47a7-a112-c6fc4a044b35" name="downloadStop" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ac96978a-1399-44c1-a5f8-193d907df36f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="cd1f87f9-c513-429e-9246-afc13604ad77" name="IModel" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12115fe0-9e1f-4f6f-8d77-10fd637e8a64" />
+        <ownedOperations>
+          <operation Id="bad7ab71-6b68-42d9-af18-bb55e1ca0b3b" name="addObserver" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7b3ca77b-6408-4ed8-90bc-0ab18280813d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4536b4b3-44bf-4641-8c9c-05be12792f5b" name="IView iv" direction="In" isUnique="false">
+                  <elementDefinition Id="9d1aba36-50bc-4129-b68f-0a16e0271021" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="68181a31-6a22-4b7a-ad4c-76593c279ebd" name="notifyObserver" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ed60d224-ad57-4091-b0a5-d4d8ab795d53" />
+          </operation>
+          <operation Id="3f116311-97cd-4c4a-ae73-147e296d6524" name="IList&lt;Video&gt; getVideos" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d8efd99e-e03e-4c3c-ae77-2f6108ff6b6c" />
+          </operation>
+          <operation Id="a3b95851-ae91-4af9-8681-79d4d487d215" name="removeObserver" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8dba6323-1c6d-4a51-b8b5-b79f67d43b6d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2e80b738-441a-48ce-aae4-a914ef57d060" name="IView iv" direction="In" isUnique="false">
+                  <elementDefinition Id="5a6b93c3-c1d5-49df-a984-3d4ac4481afb" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="970287e3-1165-4f05-ab8e-be40a4835f30" name="addVideo" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1bfc09bf-28f0-43b1-b199-af5efbb12766" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="307e01d7-27c2-4ccd-a925-1bce721eb35f" name="Video v" direction="In" isUnique="false">
+                  <elementDefinition Id="0b22e51d-e0a5-48f5-b80a-5cd04ba72dfa" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="911ea1dc-5f1d-4abb-b6cc-bf94a686054b" name="clearVideo" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="651f8f68-d0dd-47ca-8d7b-bd877be3a046" />
+          </operation>
+          <operation Id="219c49ca-21ed-4c37-8643-8110bc894000" name="removeVideo" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8cfa29b6-4312-4969-9e59-7120b0111601" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="53a87a81-68a3-4576-a750-b47826b740ef" name="Video v" direction="In" isUnique="false">
+                  <elementDefinition Id="c5ea8629-0fe9-4fee-b4e2-05f1b2d998d1" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="67c928b1-1b8c-4fb9-af12-62c6fb4858ed" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ff6b90c2-e446-4856-891d-b29137753d1f" />
+        <suppliersInternal>
+          <interfaceRealization Id="b8345821-59f2-4ef1-a962-69fce96d8cfa">
+            <interfaceMoniker Id="cd1f87f9-c513-429e-9246-afc13604ad77" LastKnownName="IModel" />
+            <elementDefinition Id="4116d36c-451e-4ea2-b2c5-ab33838fb57d" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="d4c7a7ae-a163-446f-8cb5-25f2d1cd97ae" name="List&lt;Video&gt; videos" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cc254107-6625-4813-9f46-ecb27c5fc6bb" />
+          </property>
+          <property Id="97ee4cde-64d7-4f85-9378-019b13a7e697" name="List&lt; IView&gt; controller" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1f101fb1-e6ac-4a2f-9560-283a47069d51" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="843b7633-aa77-4bed-8d0f-a045d834a44e" name="addObserver" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="590c215f-c1f0-4718-9a0c-cb6b0265d778" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ea2fed1a-4c7b-42cd-9dda-8e0817ce3351" name="IView iv" direction="In" isUnique="false">
+                  <elementDefinition Id="9c6d61e3-ca95-4a1e-b895-30ba426449a3" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="11725f25-7a60-48fe-ab21-9df0ecaf84d3" name="notifyObserver" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c6a2878a-937d-4ced-ab6a-2d4b4684109d" />
+          </operation>
+          <operation Id="4a0c6f1f-bc17-4476-bfc1-e9e8053bf802" name="IList&lt;Video&gt; getVideos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9bb16660-1a21-4006-b915-4b97f640ad8e" />
+          </operation>
+          <operation Id="3538b22a-cbe0-461b-97cf-88d2b625f3d2" name="removeObserver" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f6ead4b2-5637-4ce6-a3ee-f14e66761ad5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9f49aca4-bbac-4ba9-8e94-990a82f557c8" name="IController ic" direction="In" isUnique="false">
+                  <elementDefinition Id="29d2e158-370f-42e6-9eec-fd14fb9511de" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fbd74aa7-4a34-4dcf-83b7-c2a81a4906c4" name="addVideo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="71e855aa-0be1-416a-967a-278cdbd07b25" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a0e94c65-7957-4ee2-b7cf-be8b1bb81496" name="Video v" direction="In" isUnique="false">
+                  <elementDefinition Id="c18472c9-5e16-4686-87eb-5450619ebf37" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e470b048-03e6-4a73-8b7c-caa725b36a2a" name="clearVideo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f9c155a-2fa3-4cd2-83aa-55f1f14d8cb0" />
+          </operation>
+          <operation Id="ebf1f993-4c63-4478-ac13-964a0fb8af90" name="removeVideo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b19a1e2-b457-42ac-9ba2-485b124dcabb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="aba5935a-60d6-4d81-a42c-2a0c5032a962" name="Video v" direction="In" isUnique="false">
+                  <elementDefinition Id="2801b85a-3d9f-4774-a1b1-b4c59e5fd737" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0ec7d508-e4bb-46f7-95fd-9cb77a4a4fc3" name="DownloaderManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9a77c152-f57a-481c-a7d5-8c13802829ff" />
+        <suppliersInternal>
+          <dependency Id="fdaa7269-9095-4906-a0f2-f2e2acc63759">
+            <classMoniker Id="55c16730-6020-465a-a014-6c5ea74f3e23" LastKnownName="Downloader" />
+            <elementDefinition Id="5ff1b352-45a4-4ac0-9fdd-11b2fd8a8f7c" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="d196b780-5c11-4cfa-ac40-e0e0b4239adc" name="IModel im" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a40af185-8b14-4def-9367-7e888d0970cd" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="bb74fedb-e691-4074-b121-94451a71ee05" name="start" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="334c7c0f-f207-47c8-9971-28f82ac9731b" />
+          </operation>
+          <operation Id="d09ec979-df71-481a-99dc-2c33088fbe09" name="stop" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a6ed6b0c-727a-4c30-99b4-e5273dcf8314" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="55c16730-6020-465a-a014-6c5ea74f3e23" name="Downloader" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cf2f6be9-431f-48b5-9016-acd5ec9a1db4" />
+        <ownedOperationsInternal>
+          <operation Id="58434984-a944-43ce-9568-b8a578ffb1b5" name="recive" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1fc517ec-8484-4711-aa6f-b2587d4e6e34" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="5ca310c7-664e-4325-bdc1-6ea0225a2837" name="ModelingProject">
+    <elementDefinition Id="254e736c-6aba-4412-9714-8bbd282f1008" />
+    <profileInstances>
+      <packageHasProfileInstances Id="8d693062-1a99-400a-aed5-a8cd7abb3e59">
+        <profileInstance Id="282ba5af-8f5a-43f3-8ff6-5616a6d7ebc4" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="68d30b92-e290-43e0-a5f4-5f6132efb559">
+        <profileInstance Id="00d83cf6-0068-4553-87f7-fcf4f5ddf260" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

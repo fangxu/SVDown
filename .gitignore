@@ -1,0 +1,6 @@
+bin
+*.suo
+obj
+*.testsettings
+TestProject1
+TestResults
